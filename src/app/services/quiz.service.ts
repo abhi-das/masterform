@@ -11,7 +11,7 @@ export class QuizSevice {
 
 	getQuiz() {
 
-		const res: Observable<Response> =  this._http.get("./assets/data/questionnaire.json")
+		const res: Observable<Response> =  this._http.get("/data/questionnaire.json")
 			.map((quizRes: Response) => quizRes.json());
 
 
