@@ -1,0 +1,20 @@
+<div class="form-group text-choice">
+	<div class="user-text__item">
+		<p>
+			<span class="user-text__item-count">{{index}}</span> 
+			<i class="user-text__item-icon fa fa-long-arrow-right"></i>
+		</p>
+		<p class="user-text__label">{{qz.headline}} <span class="user-text__require" *ngIf="qz.required">*</span> </p>
+	</div>
+	<div class="user-text__field-container">
+		<input class="user-text__field" type="text" autocomplete="false" name="{{fieldName}}" 
+			value="" (change)="navTo($event, '')" (keydown.enter)="navTo($event, navigateNext)" />
+	</div>
+</div>
+
+<p *ngIf="istest" class="text-danger"><span class="arrow-up"></span>It is mandotary field.</p>
+
+<p class="user-text__btn-next" (click)="testfn(navigateNext)" [attr.aria-label]="fieldName+('-ok-button')"> 
+	<span class="user-text__btn-next-text">OK   <i class="fa fa-check"></i></span>
+	<span> press <strong>Enter</strong></span>
+</p>

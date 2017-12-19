@@ -1,0 +1,55 @@
+@import '../../base-style/variables';
+
+.mchoice {
+	&__label {
+	    font-weight: 700;
+	    font-size: 1.3em;
+	    display: inline-block;
+	    margin-left: 1em;
+	    
+	}
+	&__item {
+		display: flex;
+		flex-direction: row;
+		color: $blue-color-1x;
+		align-items: baseline;
+		&-count {
+			font-size: 1.3em;
+		}
+		p {
+			position: relative;
+			margin-right: 1.5em;
+		}
+	}
+	&__item-icon {
+		position: absolute;
+	    top: .5em;
+    	left: 1.5em;
+	}
+	&__require {
+		color: $color-red;
+		font-size: 1em;
+	}
+	&__checkbox {
+		padding-left: 3.5em;
+		padding-top: 1em;
+		color: $blue-color-1x;
+	}
+	&__btn-next {
+		margin-left: 3.5em;
+		width: auto;
+    	height: 35px;
+	    cursor: pointer;
+	    &-text {
+	    	display: inline-block;
+	    	background-color: $blue-color-2x;
+	        padding: .5em 1em;
+	    	font-size: 19px;
+		    color: $blue-color-1x;
+		    margin-right: .5em;
+	    }
+	}
+	.pretty .state label {
+		margin-left: 1em;
+	}
+}

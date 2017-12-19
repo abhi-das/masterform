@@ -1,0 +1,33 @@
+
+<div class="mchoice form-group"> 
+	<div class="mchoice__item">
+		<p>
+			<span class="mchoice__item-count">{{index}}</span> 
+			<i class="mchoice__item-icon fa fa-long-arrow-right"></i>
+		</p>
+		<p class="mchoice__label">{{qz.headline}} <span class="mchoice__require" *ngIf="qz.required">*</span> </p>
+	</div>
+	<div class="mchoice__checkbox" *ngFor='let choice of qz.choices; let idx = index'>
+
+  		<div class="pretty p-icon p-pulse" [formGroup]="headerSectionFormGroup">
+
+	        <input id="{{fieldName}}{{index}}{{idx}}" 
+        		type="checkbox" name="{{fieldName}}{{index}}" value="{{choice.value}}" 
+	        	*ngIf="qz.nextEnable == true" (click)="navTo($event,'')"/>
+	        	
+	        <input id="{{fieldName}}{{index}}" 
+        		type="checkbox" name="{{fieldName}}{{index}}" value="{{choice.value}}" 
+	        	*ngIf="qz.nextEnable == false"  (click)="navTo($event,navigateNext)"/>
+
+	        <div class="state p-info">
+	            <i class="icon fa fa-check"></i>
+	            <label>{{choice.label}}</label>
+	        </div>
+	    </div>
+	</div>
+</div>
+<p *ngIf="istest" class="text-danger"><span class="arrow-up"></span> select one of the option provided.</p>
+<p class="mchoice__btn-next" [attr.aria-label]="fieldName+('-ok-button')"
+	*ngIf="qz.nextEnable && !isLastQ" (click)="testfn(navigateNext)">
+	<span class="mchoice__btn-next-text">OK   <i class="fa fa-check"></i></span>
+</p>

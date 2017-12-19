@@ -1,0 +1,50 @@
+@import '../base-style/variables';
+
+form {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.quiz-list {
+    list-style: none;
+    margin-top: 2em;
+    padding-bottom: 5em;
+    padding-left: 0;
+    
+    &__item {
+        min-height: 15em;
+        padding: 2em 0;
+        text-align: left;
+        margin-bottom: 1em;
+
+    }
+    &__btn-container {
+        margin-left: 3.5em;
+        padding-right: 5em;
+        padding-left: 5em;
+        padding-bottom: 10em;
+    }
+    &__btn-submit {
+        outline: none;
+        border: none;
+        background-color: transparent;
+        color: $blue-color-1x;
+        font-family: 'Montserrat', sans-serif;
+        &-text {
+            display: inline-block;
+            background-color: $blue-color-2x;
+            padding: .5em 1em;
+            font-size: 19px;
+            color: $blue-color-1x;
+            margin-right: .5em;
+        }
+    }
+}
+
+.form-footer {
+   
+    background: rgba(210, 174,243, .5);
+    
+}

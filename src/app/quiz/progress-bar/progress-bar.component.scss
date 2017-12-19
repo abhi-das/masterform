@@ -1,0 +1,11 @@
+@import '../../base-style/variables';
+
+.progress {
+    position: fixed;
+    bottom: 1em;
+    right: 11em;
+    &__container {
+        display: inline-block;
+        padding: .5em 1em;
+    }
+}

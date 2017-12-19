@@ -1,0 +1,6 @@
+<div class="form-data__container" id="formDataContainer">
+	<div class="form-data__inner" *ngIf="formDataValues">
+		<p><strong>Form Data:</strong></p>
+		<pre>{{formDataValues | json }}</pre>
+	</div>
+</div>

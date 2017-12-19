@@ -1,0 +1,31 @@
+@import '../../base-style/variables';
+
+.slide-panel {
+	position: fixed;
+	top: 2em;
+	right: 0;
+	z-index: 2;
+	&__container {
+		position: absolute;
+		top: 2em;
+		right: -15em;
+		transition: all .2s ease-in-out;
+		&.isPanelOpen {
+			right: 0;
+		}
+	}
+	&__header-icon {
+		cursor: pointer;
+		padding: .8em;
+		color: #4e63b1;
+		background: $blue-color-4x;
+	}
+	&__content {
+		width: 15em;
+		min-height: 20em;
+		background: $blue-color-4x;
+		margin-left: 3em;
+	}
+
+}
+

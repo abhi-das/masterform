@@ -1,1 +1,81 @@
 /* You can add global styles to this file, and also import other style files */
+
+// @import '~bootstrap/dist/css/bootstrap.min.css';
+@import '~font-awesome/css/font-awesome.css';
+@import '~pretty-checkbox/src/pretty-checkbox.scss';
+
+
+$base-color: #ebd7fa;
+
+body {
+    background-color: $base-color;
+    font-family: 'Roboto', sans-serif;
+	font-family: 'Open Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.text-danger {
+    background: #ff0000;
+    color: #fff;
+    font-size: .8em;
+    padding: .5em 1em;
+    font-weight: bold;
+    display: inline-block;
+    position: relative;
+    margin-left: 7em;
+}
+
+.arrow-up {
+    width: 0; 
+    height: 0; 
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    position: absolute;
+    top: -5px;
+    border-bottom: 5px solid red;
+}
+
+.visually-hidden {
+    visibility: hidden;
+    height: 0;
+}
+
+.loader {
+    border: 1em solid #f6f6f6;
+    border-top: 1em solid #3498db;
+    border-radius: 50%;
+    width: 6em;
+    height: 6em;
+    animation: spin 2s linear infinite;
+    top: 50%;
+    left: 50%;
+    position: fixed;
+    margin-top: -3em;
+    margin-left: -3em;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg) }
+    100% {transform: rotate(360deg) }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
