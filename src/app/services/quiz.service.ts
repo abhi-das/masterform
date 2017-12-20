@@ -15,11 +15,12 @@ export class QuizSevice {
 		let host = '';
 		if(this.platformId == 'server') {
 			let req = this.injector.get('request');
-			host = 'http://'+ req.get('host');
+			// host = 'http://'+ req.get('host');
+			host = this.injector.get('serverUrl');
 			// console.log("locales from crawlers:>>>>>>>>> " + req.headers["accept-language"]);
             // console.log("headers>>>>>>>>: ", req.headers);
 			// console.log("host>>>>>>>>>: " + req.get('host'));			
-			// console.log( 'req>>>>>>>>>> ', process.env);
+			// console.log( 'serverUrl>>>>>>>>>> ', this.injector.get('serverUrl'));
 			// console.log( 'req>>>>>>>>>> ', req );
 		}
 
