@@ -14,9 +14,11 @@ export class QuizSevice {
 
 		let host = '';
 		if(this.platformId == 'server') {
-			let req = this.injector.get('request');
-			// host = 'http://'+ req.get('host');
+			// ------Coming from Express Server
+			// let req = this.injector.get('request');
+			// host = 'http://'+ req.get('host');			
 			host = this.injector.get('serverUrl');
+
 			// console.log("locales from crawlers:>>>>>>>>> " + req.headers["accept-language"]);
             // console.log("headers>>>>>>>>: ", req.headers);
 			// console.log("host>>>>>>>>>: " + req.get('host'));			
