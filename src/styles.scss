@@ -4,11 +4,10 @@
 @import '~font-awesome/css/font-awesome.css';
 @import '~pretty-checkbox/src/pretty-checkbox.scss';
 
-
-$base-color: #ebd7fa;
+@import './app/base-style/variables';
 
 body {
-    background-color: $base-color;
+    background-color: $base-blue;
     font-family: 'Roboto', sans-serif;
 	font-family: 'Open Sans', sans-serif;
     padding: 0;
@@ -16,7 +15,7 @@ body {
 }
 
 .text-danger {
-    background: #ff0000;
+    background: $red-color-1x;
     color: #fff;
     font-size: .8em;
     padding: .5em 1em;
@@ -42,8 +41,8 @@ body {
 }
 
 .loader {
-    border: 1em solid #f6f6f6;
-    border-top: 1em solid #3498db;
+    border: 1em solid $grey-color-1x;
+    border-top: 1em solid $blue-color-6x;
     border-radius: 50%;
     width: 6em;
     height: 6em;

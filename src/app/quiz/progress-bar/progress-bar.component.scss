@@ -3,9 +3,16 @@
 .progress {
     position: fixed;
     bottom: 1em;
-    right: 11em;
+    width: 25em;
+    right: 0;
+    text-align: left;
+    background: $blue-color-2x;
+    color: $blue-color-1x;
+    padding-left: .5em;
+    border-radius: 1em 0 0 1em;
     &__container {
         display: inline-block;
         padding: .5em 1em;
+
     }
 }
