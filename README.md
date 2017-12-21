@@ -9,6 +9,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 ## Reference
 
 https://github.com/angular/universal-starter
+https://codeburst.io/angular-server-side-rendering-using-angular-cli-bbde0c0eefe9
 
 ## Deploy on github pages
 
