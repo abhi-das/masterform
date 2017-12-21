@@ -7,12 +7,15 @@ import 'rxjs/add/operator/map';
 
 export class QuizSevice {
 
+	
+
 	constructor(private _http: Http, @Inject(PLATFORM_ID) private platformId: Object,
 			private injector: Injector) {}
 
 	getQuiz() {
 
 		let host = '';
+		let prodFolder = 'pagedeploy';
 		if(this.platformId == 'server') {
 			// ------Coming from Express Server
 			// let req = this.injector.get('request');
