@@ -55,3 +55,7 @@ masterform/src/app/services/quiz.service.ts
 ## Page deployment
 ng build --prod --base-href https://abhi-das.github.io/masterform/
 ngh
+
+## D3JS
+
+http://www.muller.tech/post/2017/11/13/angular5-d3js-pie-chart/

@@ -16,8 +16,9 @@ export class AppDataService {
 
 		if(this.platformId == 'server') {
 			// ------Coming from Express Server
-			// let req = this.injector.get('request');
-			// host = 'http://'+ req.get('host');			
+			let req = this.injector.get('request');
+			// host = 'http://'+ req.get('host');	
+			// console.log("host>>>>>.", req.get('host'));
 			host = this.injector.get('serverUrl');
 		}
 
