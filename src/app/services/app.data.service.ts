@@ -19,7 +19,6 @@ export class AppDataService {
 			// let req = this.injector.get('request');
 			// host = 'http://'+ req.get('host');			
 			host = this.injector.get('serverUrl');
-			console.log('host +++++>  ',host);
 		}
 
 		const res: Observable<Response> =  this._http.get(host+"/data/questionnaire.json")
