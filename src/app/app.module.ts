@@ -12,6 +12,7 @@ import { ServicespageComponent } from './servicespage/servicespage.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { BarChartComponent } from './shared/bar-chart/bar-chart.component';
+// import { PieChartComponent } from './shared/pie-chart/pie-chart.component';
 
 @NgModule({
   imports: [
@@ -25,7 +26,8 @@ import { BarChartComponent } from './shared/bar-chart/bar-chart.component';
     ContactpageComponent,
     HomepageComponent,
     ServicespageComponent,
-    BarChartComponent
+    BarChartComponent,
+    // PieChartComponent
   ],
   providers: [ AppDataService ],
   bootstrap: [AppComponent]
