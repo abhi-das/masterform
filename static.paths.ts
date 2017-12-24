@@ -1,5 +1,6 @@
 export const ROUTES = [
   '/',
-  '/lazy',
-  '/lazy/nested'
+  '/home-page',
+  '/contact-page',
+  'services-page'
 ];

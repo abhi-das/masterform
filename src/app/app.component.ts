@@ -9,18 +9,13 @@ import { Response } from '@angular/http';
 })
 
 export class AppComponent {
-  title = 'app';
 
-  quiz: any;
 
-  constructor(private _appDataSrv: AppDataService) {}
+  constructor() {}
 
   ngOnInit() {
 
-  	// this._appDataSrv.getQuiz().subscribe( dt => this.appQuizData = dt );
-  	this._appDataSrv.getQuiz().subscribe((res: Response) => {
-  		this.quiz = res['questionnaire']['questions'];
-  	});
+  	
 
   }
 

@@ -1,0 +1,9 @@
+<p>
+  homepage works!
+</p>
+<h2>App Data Service Used and below is the data shown. </h2>
+<ul *ngIf="quiz">
+  <li *ngFor="let qz of quiz">
+    <h4>{{qz.headline}}</h4>
+  </li>
+</ul>

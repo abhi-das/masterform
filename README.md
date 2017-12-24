@@ -51,3 +51,7 @@ Note: To deploy your static site to a static hosting platform you will have to d
 See this file for the imeplementation
 
 masterform/src/app/services/quiz.service.ts
+
+## Page deployment
+ng build --prod --base-href https://abhi-das.github.io/masterform/
+ngh

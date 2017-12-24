@@ -1,5 +1,5 @@
-import { Injectable, OnInit, Inject, PLATFORM_ID, Injector } from '@angular/core';
-import { Http, Response } from '@angular/http';
+import { Injectable, OnInit,Inject, PLATFORM_ID, Injector } from '@angular/core';
+import { Http, Response, HttpModule } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 
@@ -19,6 +19,7 @@ export class AppDataService {
 			// let req = this.injector.get('request');
 			// host = 'http://'+ req.get('host');			
 			host = this.injector.get('serverUrl');
+			console.log('host +++++>  ',host);
 		}
 
 		const res: Observable<Response> =  this._http.get(host+"/data/questionnaire.json")

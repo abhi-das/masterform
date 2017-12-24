@@ -6,12 +6,15 @@ import { HttpModule } from '@angular/http';
 import {AppModule} from './app.module';
 import {AppComponent} from './app.component';
 import { AppDataService } from './services/app.data.service';
+import { AppRoutingModule } from './app.routing';
+
 
 @NgModule({
   imports: [
     // The AppServerModule should import your AppModule followed
     // by the ServerModule from @angular/platform-server.
     HttpModule,
+    AppRoutingModule,
     AppModule,
     ServerModule,
     ModuleMapLoaderModule,
