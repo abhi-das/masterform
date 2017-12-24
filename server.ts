@@ -28,12 +28,26 @@ import { ngExpressEngine } from '@nguniversal/express-engine';
 import { provideModuleMap } from '@nguniversal/module-map-ngfactory-loader';
 
 // Our Universal express-engine (found @ https://github.com/angular/universal/tree/master/modules/express-engine)
-app.engine('html', ngExpressEngine({
-  bootstrap: AppServerModuleNgFactory,
-  providers: [
-    provideModuleMap(LAZY_MODULE_MAP)
-  ]
-}));
+
+//-----------Original----------//
+// app.engine('html', ngExpressEngine({
+//   bootstrap: AppServerModuleNgFactory,
+//   providers: [
+//     provideModuleMap(LAZY_MODULE_MAP)
+//   ]
+// }));
+
+//-----------Customized----------//
+app.engine('html', (_, options, callback) => {
+    let engine = ngExpressEngine({
+        bootstrap: AppServerModuleNgFactory,
+        providers: [
+            { provide: 'request', useFactory: () => options.req, deps: [] },
+            provideModuleMap(LAZY_MODULE_MAP)
+        ]
+    });
+    engine(_, options, callback);
+});
 
 app.set('view engine', 'html');
 app.set('views', join(DIST_FOLDER, 'browser'));
@@ -47,9 +61,22 @@ app.get('*.*', express.static(join(DIST_FOLDER, 'browser'), {
   maxAge: '1y'
 }));
 
+//-----------Original----------//
 // ALl regular routes use the Universal engine
+// app.get('*', (req, res) => {
+//   res.render('index', { req });
+// });
+
+//-----------Customized----------//
 app.get('*', (req, res) => {
-  res.render('index', { req });
+  res.render('index', {
+    req,
+    res,
+    providers: [{
+      provide: 'serverUrl',
+      useValue: `${req.protocol}://${req.get('host')}`
+    }]
+  });
 });
 
 // Start up the Node server
