@@ -20,9 +20,7 @@ export class PieChartComponent implements OnInit {
 	private height: number;
 	private radius: number;
 
-
-
-	constructor(_ele: ElementRef, _d3Service: D3Service) { 
+	constructor(_d3Service: D3Service) { 
 		this.d3 = _d3Service.getD3();
 	}
 
