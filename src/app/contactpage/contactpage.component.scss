@@ -1,0 +1,42 @@
+.form-container {
+	width: 80%;
+	margin: auto;
+}
+.form-group {
+    margin-bottom: 1rem;
+    & label {
+	    display: inline-block;
+	    margin-bottom: .5rem;
+	}
+	& input[type="text"].form-control {
+	    display: block;
+	    width: 100%;
+	    padding: .5rem .75rem;
+	    font-size: 1rem;
+	    line-height: 1.25;
+	    color: #464a4c;
+	    background-color: #fff;
+	    background-image: none;
+        border: 1px solid rgba(0,0,0,.15);
+		border-radius: .25rem;	
+        box-sizing: border-box;
+	}
+}
+
+.cheese-types,
+.bread-size,
+.veggies-types,
+.others {
+	display: inline-block;
+	padding: 1em 2em;
+	border: 1px solid #c7c7c7;
+	border-radius: 1em;
+	& label {
+		display: block;
+		padding: .5em 1em;
+	}
+	h4 {
+		padding: .1em;
+		margin: .1em; 
+	}
+}

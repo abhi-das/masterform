@@ -1,3 +1,87 @@
-<p>
-  contactpage works!
-</p>
+<div class="form-container">
+	
+
+	<form novalidate
+		[formGroup]="orderForm"
+		(ngSubmit)="onFormSubmit()">
+
+		<section class="form-group row">
+			<label for="customerName">Customer Name</label>
+			<input class="form-control" id="customerName" type="text" 
+				formControlName="customerName" placeholder="Customer Name here">
+		</section>
+
+		<section class="row">
+			<div class="form-group bread-size">
+				<h4>Bread Size</h4>
+				<label class="radio" for="small">
+					<input class="form-control" id="small" type="radio" 
+						formControlName="breadSize" value="small"> Small
+				</label>
+				<label class="radio" for="medium">
+					<input class="form-control" id="medium" type="radio" 
+						formControlName="breadSize" value="medium"> Medium
+				</label>
+					<label class="radio" for="large">
+					<input class="form-control" id="large" type="radio" 
+						formControlName="breadSize" value="large"> Large
+				</label>
+			</div>
+			<div class="form-group cheese-types" formGroupName="cheese">
+				<h4>Cheese</h4>
+				<label class="checkbox" for="cheese-provo">
+					<input class="form-control" id="cheese-provo" 
+					type="checkbox" formControlName="cheeseProvo"> Provo
+				</label>
+				<label class="checkbox" for="cheese-chedder">
+					<input class="form-control" id="cheese-chedder" 
+					type="checkbox" formControlName="cheeseChedder"> Chedder
+				</label>
+					<label class="checkbox" for="cheese-swiss">
+					<input class="form-control" id="cheese-swiss" 
+					type="checkbox" formControlName="cheeseSwiss"> Swiss
+				</label>
+			</div>
+			<div class="form-group veggies-types" formGroupName="veggi">
+				<h4>Veggies</h4>
+				<label class="checkbox" for="veggi-lettuce">
+					<input class="form-control" id="veggi-lettuce" 
+					type="checkbox" formControlName="veggiLettuce"> Lettuce
+				</label>
+				<label class="checkbox" for="veggi-tomato">
+					<input class="form-control" id="veggi-tomato" 
+					type="checkbox" formControlName="veggiTomato"> Tomato
+				</label>
+				<label class="checkbox" for="veggi-musturd">
+					<input class="form-control" id="veggi-musturd" 
+					type="checkbox" formControlName="veggiMusturd"> Musturd
+				</label>
+			</div>
+
+			<div class="form-group others" formGroupName="others" 
+				*ngIf="orderForm.get('breadSize').value=='small'">
+				<h4>Others</h4>
+				<label class="checkbox" for="washed-rind">
+					<input class="form-control" id="washed-rind" 
+					type="checkbox" formControlName="washedRind"> Washed Rind
+				</label>
+				<label class="checkbox" for="brushed-rind">
+					<input class="form-control" id="brushed-rind" 
+					type="checkbox" formControlName="brushedRind"> Brushed Rind
+				</label>
+				<label class="checkbox" for="bloomy-rind">
+					<input class="form-control" id="bloomy-rind" 
+					type="checkbox" formControlName="bloomyRind"> Bloomy Rind
+				</label>
+			</div>
+
+		</section>
+
+		<section>
+			<button type="submit">Order</button>
+			<button type="button" (click)="onReset()">Reset</button>
+		</section>
+		
+	</form>
+
+</div>

@@ -11,6 +11,7 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { ServicespageComponent } from './servicespage/servicespage.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule.withServerTransition({appId: 'my-app'}),
     HttpModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   declarations: [
     AppComponent,
