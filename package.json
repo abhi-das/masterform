@@ -8,6 +8,8 @@
     "start": "ng serve",
     "build": "ng build",
     "lint": "ng lint",
+    "testandreport": "ng test --code-coverage",
+    "codecoverage": "http-server -c-1 -o -p 9875 ./coverage",
     "build:client-and-server-bundles": "ng build --prod && ng build --prod --app 1 --output-hashing=false",
     "build:prerender": "npm run build:client-and-server-bundles && npm run webpack:server && npm run generate:prerender",
     "build:ssr": "npm run build:client-and-server-bundles && npm run webpack:server",
