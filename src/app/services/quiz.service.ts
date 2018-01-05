@@ -22,7 +22,7 @@ export class QuizSevice {
       * @func getQuiz() 
       * @return Observable
       */
-	getQuiz(): Observable {
+	getQuiz(): Observable< any > {
 
 		let host = '';
 
