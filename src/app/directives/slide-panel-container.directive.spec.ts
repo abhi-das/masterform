@@ -1,8 +1,8 @@
-import { SlidePanelContainer } from './slide-panel-container.directive';
+import { SlidePanelContainerDirective } from './slide-panel-container.directive';
 
-describe('SlidePanelContainer', () => {
+describe('SlidePanelContainerDirective', () => {
   it('should create an instance', () => {
-    const directive = new SlidePanelContainer();
+    const directive = new SlidePanelContainerDirective();
     expect(directive).toBeTruthy();
   });
 });

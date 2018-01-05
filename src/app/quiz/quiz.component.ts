@@ -7,7 +7,7 @@ import { QuizProgressService } from '../services/quiz.progress.service';
 
 
 @Component({
-  selector: 'quiz',
+  selector: 'app-quiz',
   templateUrl: './quiz.component.html',
   styleUrls: ['./quiz.component.scss']
 })
@@ -31,17 +31,17 @@ export class QuizComponent implements OnInit {
   pageLoader: boolean;
 
   /**
-    * @func constructor() 
+    * @func constructor()
     * @param _scrollToService provide ScrollToService to the component
     * @param _qzSer provide QuizSevice to the component
     * @param _qzProgressSrv provide QuizProgressService to the component
     */
-  constructor(private _scrollToService: ScrollToService, 
-      private _qzSer: QuizSevice, 
+  constructor(private _scrollToService: ScrollToService,
+      private _qzSer: QuizSevice,
       private _qzProgressSrv: QuizProgressService) { }
 
   /**
-    * @func ngOnInit() 
+    * @func ngOnInit()
     * @return void
     * @method getQuiz() make a Http call and get the qzData
     * Declare empty FormGroup which will be populated based on component type (single/ multiple/ text quiz type etc.)
@@ -64,21 +64,21 @@ export class QuizComponent implements OnInit {
   }
 
   /**
-    * @func onFeedbackSubmit() 
+    * @func onFeedbackSubmit()
     * @return void
     * @param feedback: get the form data
     * @param showDtContainer: target container id to scroll the page
     * @method scrollTo() inject target id to scroll the page on form submit event
     */
   onFeedbackSubmit(feedback: any, showDtContainer: string): void {
-    
+
     // console.log("count > ", this.count);
     this.formData = feedback;
 
     const config: ScrollToConfigOptions = {
       target: showDtContainer
     };
- 
+
     this._scrollToService.scrollTo(config);
   }
 

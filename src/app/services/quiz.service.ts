@@ -7,36 +7,36 @@ import 'rxjs/add/operator/map';
 
 export class QuizSevice {
 
-	
-	/**
-      * @func constructor() 
-      * @return void
-      * @param _http: Provide Http to the component
-      * @param platformId: To check if application route is directed from Server or Browser
-      * @param injector: To access server variable 
-      */
-	constructor(private _http: Http, @Inject(PLATFORM_ID) private platformId: Object,
-			private injector: Injector) {}
 
-	/**
-      * @func getQuiz() 
-      * @return Observable
-      */
-	getQuiz(): Observable< any > {
+    /**
+     * @func constructor()
+     * @return void
+     * @param _http: Provide Http to the component
+     * @param platformId: To check if application route is directed from Server or Browser
+     * @param injector: To access server variable
+     */
+    constructor(private _http: Http, @Inject(PLATFORM_ID) private platformId: Object,
+        private injector: Injector) {}
 
-		let host = '';
+    /**
+     * @func getQuiz()
+     * @return Observable
+     */
+    getQuiz(): Observable < any > {
 
-		if(this.platformId == 'server') {
-			// ------Coming from Express Server
-			// let req = this.injector.get('request');
-			// host = 'http://'+ req.get('host');			
-			host = this.injector.get('serverUrl');
-		}
+        let host = '';
 
-		const res: Observable<Response> =  this._http.get(host+"/data/questionnaire.json")
-			.map((quizRes: Response) => quizRes.json());
+        if (this.platformId === 'server') {
+            // ------Coming from Express Server
+            // let req = this.injector.get('request');
+            // host = 'http://'+ req.get('host');
+            host = this.injector.get('serverUrl');
+        }
 
-		// Add Error hanlding logic here
-		return res;
-	}
+        const res: Observable < Response > = this._http.get(host + '/data/questionnaire.json')
+            .map((quizRes: Response) => quizRes.json());
+
+        // Add Error hanlding logic here
+        return res;
+    }
 }

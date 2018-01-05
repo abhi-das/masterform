@@ -10,34 +10,34 @@
 	    	*ngFor="let question of questions; let idx = index; let isLastQ = last" >
 
 	    	<!-- Component Type 1-->
-	        <single-choice *ngIf="question.question_type == 'single-choice'" 
+	        <app-single-choice *ngIf="question.question_type == 'single-choice'" 
 	        	[qz]="question" 
 	        	[index]="(idx+1)"
 	        	[isLastQ]="isLastQ"
 	        	[headerSectionFormGroup]="form"
 	        	[fieldName]="'schoice'+(idx)"
 	        	[navigateNext]="'#quest'+(idx+1)">
-	        </single-choice>
+	        </app-single-choice>
 
 	        <!-- Component Type 2-->
-	        <multiple-choice *ngIf="question.question_type == 'multiple-choice'" 
+	        <app-multiple-choice *ngIf="question.question_type == 'multiple-choice'" 
 	        	[qz]="question" 
 	        	[index]="(idx+1)"
 	        	[isLastQ]="isLastQ"
 	        	[headerSectionFormGroup]="form"
 	        	[fieldName]="'mchoice'+(idx)"
 	        	[navigateNext]="'#quest'+(idx+1)">
-	        </multiple-choice>
+	        </app-multiple-choice>
 	
 			<!-- Component Type 3-->
-			<user-input *ngIf="question.question_type == 'text'" 
+			<app-user-input *ngIf="question.question_type == 'text'" 
 				[qz]="question" 
 	        	[index]="(idx+1)"
 	        	[isLastQ]="isLastQ"
 	        	[headerSectionFormGroup]="form"
 	        	[fieldName]="'userchoice'+(idx)"
 	        	[navigateNext]="'#quest'+(idx+1)">
-	        </user-input>
+	        </app-user-input>
 	        
 	    </li>
 	</ul>
@@ -54,8 +54,8 @@
 <!-- Quiz Progress bar -->
 <div class="form-footer" *ngIf="qzData">
 	<div class="form-footer__container">
-		<progress-bar [count]="count" [totalCount]="totalCount"></progress-bar>
-		<feedback-data *ngIf="formData" [formDataValues]="formData"></feedback-data>
+		<app-progress-bar [count]="count" [totalCount]="totalCount"></app-progress-bar>
+		<app-feedback-data *ngIf="formData" [formDataValues]="formData"></app-feedback-data>
 	</div>
 </div>
 
