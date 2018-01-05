@@ -2,7 +2,7 @@ import { Directive, HostBinding } from '@angular/core';
 import { ConfigSlidePanelDirective } from './config-slide-panel.directive';
 
 @Directive({
-    selector: '[slide-panel-container]'
+    selector: '[appSlidePanelContainer]'
 })
 
 export class SlidePanelContainerDirective {

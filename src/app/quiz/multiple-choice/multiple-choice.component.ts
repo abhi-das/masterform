@@ -6,8 +6,8 @@ import { QuizProgressService } from '../../services/quiz.progress.service';
 @Component({
   selector: 'app-multiple-choice',
   templateUrl: './multiple-choice.component.html',
-  styleUrls: ['./multiple-choice.component.scss'],
-  inputs: ['qz', 'index', 'isLastQ', 'navigateNext', 'headerSectionFormGroup', 'fieldName']
+  styleUrls: ['./multiple-choice.component.scss']
+  // inputs: ['qz', 'index', 'isLastQ', 'navigateNext', 'headerSectionFormGroup', 'fieldName']
 })
 export class MultipleChoiceComponent implements OnInit {
 

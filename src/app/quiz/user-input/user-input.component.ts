@@ -7,7 +7,7 @@ import { QuizProgressService } from '../../services/quiz.progress.service';
   selector: 'app-user-input',
   templateUrl: './user-input.component.html',
   styleUrls: ['./user-input.component.scss'],
-  inputs: ['qz', 'index', 'isLastQ', 'navigateNext', 'headerSectionFormGroup', 'fieldName']
+  // inputs: ['qz', 'index', 'isLastQ', 'navigateNext', 'headerSectionFormGroup', 'fieldName']
 })
 export class UserInputComponent implements OnInit {
 

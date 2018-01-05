@@ -2,7 +2,7 @@ import { Directive, HostBinding, HostListener, EventEmitter } from '@angular/cor
 import { SlidePanelContainerDirective } from './slide-panel-container.directive';
 
 @Directive({
-  selector: '[config-slide-panel]'
+  selector: '[appConfigSlidePanel]'
 })
 
 export class ConfigSlidePanelDirective {

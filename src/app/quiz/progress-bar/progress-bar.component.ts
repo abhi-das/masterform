@@ -4,7 +4,7 @@ import { Component, OnInit, Input } from '@angular/core';
   selector: 'app-progress-bar',
   templateUrl: './progress-bar.component.html',
   styleUrls: ['./progress-bar.component.scss'],
-  inputs: ['count', 'totalCount']
+  // inputs: ['count', 'totalCount']
 })
 export class ProgressBarComponent implements OnInit {
 

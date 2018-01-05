@@ -4,7 +4,7 @@ import { Component, OnInit, Input } from '@angular/core';
   selector: 'app-feedback-data',
   templateUrl: './feedback-data.component.html',
   styleUrls: ['./feedback-data.component.scss'],
-  inputs: ['formDataValues']
+  // inputs: ['formDataValues']
 })
 export class FeedbackDataComponent implements OnInit {
 

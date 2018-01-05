@@ -7,7 +7,7 @@ import { QuizProgressService } from '../../services/quiz.progress.service';
   selector: 'app-single-choice',
   templateUrl: './single-choice.component.html',
   styleUrls: ['./single-choice.component.scss'],
-  inputs: ['qz', 'index', 'isLastQ', 'navigateNext', 'headerSectionFormGroup', 'fieldName']
+  // inputs: ['qz', 'index', 'isLastQ', 'navigateNext', 'headerSectionFormGroup', 'fieldName']
 })
 
 export class SingleChoiceComponent implements OnInit {
