@@ -9,6 +9,7 @@
 	    <li id="quest{{idx}}" class="quiz-list__item" 
 	    	*ngFor="let question of questions; let idx = index; let isLastQ = last" >
 
+	    	<!-- Component Type 1-->
 	        <single-choice *ngIf="question.question_type == 'single-choice'" 
 	        	[qz]="question" 
 	        	[index]="(idx+1)"
@@ -18,6 +19,7 @@
 	        	[navigateNext]="'#quest'+(idx+1)">
 	        </single-choice>
 
+	        <!-- Component Type 2-->
 	        <multiple-choice *ngIf="question.question_type == 'multiple-choice'" 
 	        	[qz]="question" 
 	        	[index]="(idx+1)"
@@ -27,6 +29,7 @@
 	        	[navigateNext]="'#quest'+(idx+1)">
 	        </multiple-choice>
 	
+			<!-- Component Type 3-->
 			<user-input *ngIf="question.question_type == 'text'" 
 				[qz]="question" 
 	        	[index]="(idx+1)"
@@ -38,6 +41,7 @@
 	        
 	    </li>
 	</ul>
+	<!-- Submit button -->
 	<div class="form-group quiz-list__btn-container" *ngIf="!pageLoader">
 		<button class="quiz-list__btn-submit" [attr.aria-describedby]="'submit-form'"
 			name="submit" type="submit" [disabled]="!form.valid">
@@ -47,6 +51,7 @@
 	</div>
 </form>
 
+<!-- Quiz Progress bar -->
 <div class="form-footer" *ngIf="qzData">
 	<div class="form-footer__container">
 		<progress-bar [count]="count" [totalCount]="totalCount"></progress-bar>
@@ -54,4 +59,5 @@
 	</div>
 </div>
 
+<!-- Page Loader -->
 <div class="loader" *ngIf="pageLoader"></div>

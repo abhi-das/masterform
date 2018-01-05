@@ -13,6 +13,15 @@ import { QuizProgressService } from '../services/quiz.progress.service';
 })
 export class QuizComponent implements OnInit {
 
+  /**
+    * @variable questions
+    * @variable form
+    * @variable formData
+    * @variable qzData
+    * @variable count
+    * @variable totalCount
+    * @variable pageLoader
+    */
   questions: any;
   form: FormGroup;
   formData: object;
@@ -21,8 +30,23 @@ export class QuizComponent implements OnInit {
   totalCount: number;
   pageLoader: boolean;
 
-  constructor(private _scrollToService: ScrollToService, private _qzSer: QuizSevice, private _qzProgressSrv: QuizProgressService) { }
+  /**
+    * @func constructor() 
+    * @param _scrollToService provide ScrollToService to the component
+    * @param _qzSer provide QuizSevice to the component
+    * @param _qzProgressSrv provide QuizProgressService to the component
+    */
+  constructor(private _scrollToService: ScrollToService, 
+      private _qzSer: QuizSevice, 
+      private _qzProgressSrv: QuizProgressService) { }
 
+  /**
+    * @func ngOnInit() 
+    * @return void
+    * @method getQuiz() make a Http call and get the qzData
+    * Declare empty FormGroup which will be populated based on component type (single/ multiple/ text quiz type etc.)
+    * @count subscribe currentQuizCount to update quiz progress
+    */
   ngOnInit() {
 
     this.pageLoader = true;
@@ -34,13 +58,19 @@ export class QuizComponent implements OnInit {
       this.pageLoader = false;
     });
 
-    // Form Controls
     this.form = new FormGroup({});
 
     this._qzProgressSrv.currentQuizCount.subscribe(cVal => this.count = cVal );
   }
 
-  onFeedbackSubmit(feedback: any, showDtContainer: string) {
+  /**
+    * @func onFeedbackSubmit() 
+    * @return void
+    * @param feedback: get the form data
+    * @param showDtContainer: target container id to scroll the page
+    * @method scrollTo() inject target id to scroll the page on form submit event
+    */
+  onFeedbackSubmit(feedback: any, showDtContainer: string): void {
     
     // console.log("count > ", this.count);
     this.formData = feedback;

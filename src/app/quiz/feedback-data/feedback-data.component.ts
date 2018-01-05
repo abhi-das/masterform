@@ -8,8 +8,13 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class FeedbackDataComponent implements OnInit {
 
-  @Input() formDataValues;
-  
+	/**
+    * @func constructor() 
+    * @return void
+    * @Input formDataValues: Get the Submitted Form data in JSON format
+    */
+	@Input() formDataValues;
+
 	constructor() { }
 
 	ngOnInit() {

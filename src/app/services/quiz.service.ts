@@ -8,11 +8,21 @@ import 'rxjs/add/operator/map';
 export class QuizSevice {
 
 	
-
+	/**
+      * @func constructor() 
+      * @return void
+      * @param _http: Provide Http to the component
+      * @param platformId: To check if application route is directed from Server or Browser
+      * @param injector: To access server variable 
+      */
 	constructor(private _http: Http, @Inject(PLATFORM_ID) private platformId: Object,
 			private injector: Injector) {}
 
-	getQuiz() {
+	/**
+      * @func getQuiz() 
+      * @return Observable
+      */
+	getQuiz(): Observable {
 
 		let host = '';
 

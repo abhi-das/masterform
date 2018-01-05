@@ -9,12 +9,22 @@ export class SlidePanelContainer {
 
 	openState:boolean = false;
 
+	/**
+  	* @func isPanelOpen() 
+	* @HostBinding event binding to 'isPanelOpen' class to notify state change of the directive
+	* @return boolean
+  	*/
 	@HostBinding('class.isPanelOpen')
-	get isPanelOpen() {
+	get isPanelOpen(): boolean {
 		return this.openState;
 	}
 
-	listenToMe(isOpen:boolean) {
+	/**
+  	* @func listenToMe() 
+	* @param isOpen receive new state and update @variable openState
+	* @return boolean
+  	*/
+	listenToMe(isOpen:boolean): boolean {
 		return this.openState = isOpen;
 	}
 
