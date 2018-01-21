@@ -1,6 +1,6 @@
 # Masterform
 
-![Alt text](screenshot/app.png?raw=true "CRUD")
+![Alt text](screenshots/app.png?raw=true "CRUD")
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.0.
 
